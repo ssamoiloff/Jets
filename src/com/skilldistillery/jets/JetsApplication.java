@@ -1,6 +1,5 @@
 package com.skilldistillery.jets;
 
-import java.io.ObjectInputStream.GetField;
 import java.util.Scanner;
 
 public class JetsApplication {
@@ -22,47 +21,6 @@ public class JetsApplication {
 		menuLogic();
 	}
 	
-	public void printJets() {
-		for (Jet jet : airField.getJetsList()) {
-			System.out.println(jet);
-			System.out.println();
-		}
-	}
-	
-	public void flyAllJets() {
-		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
-			airField.getJetsList().get(jet).fly();
-		}
-	}
-	
-	public void findFastest() {
-		double fastest = 0.0;
-		int fastestJetIndex = 0;
-		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
-			if (fastest < airField.getJetsList().get(jet).getSpeed()) {
-				fastest = airField.getJetsList().get(jet).getSpeed();
-				fastestJetIndex = jet;
-			}
-		}
-		System.out.println("\t\t---FASTEST JET---");
-		System.out.println(airField.getJetsList().get(fastestJetIndex));
-		System.out.println();
-	}
-	
-	public void findLongest() {
-		int longest = 0;
-		int longestJetIndex = 0;
-		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
-			if (longest < airField.getJetsList().get(jet).getRange()) {
-				longest = airField.getJetsList().get(jet).getRange();
-				longestJetIndex = jet;
-			}
-		}
-		System.out.println("\t\t---LONGEST RANGE---");
-		System.out.println(airField.getJetsList().get(longestJetIndex));
-		System.out.println();
-	}
-
 	public void printHeader() {
 		System.out.println(" _______________________________________________ ");
 		System.out.println("|***********************************************|");
@@ -108,6 +66,7 @@ public class JetsApplication {
 				findLongest();
 				break;
 			case 5:
+				loadCargo();
 				break;
 			case 6:
 				break;
@@ -119,5 +78,56 @@ public class JetsApplication {
 				System.exit(0);
 			}
 		}
+	}
+	
+	public void printJets() {
+		for (Jet jet : airField.getJetsList()) {
+			System.out.println(jet);
+			System.out.println();
+		}
+	}
+	
+	public void flyAllJets() {
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			airField.getJetsList().get(jet).fly();
+		}
+	}
+	
+	public void findFastest() {
+		double fastest = 0.0;
+		int fastestJetIndex = 0;
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			if (fastest < airField.getJetsList().get(jet).getSpeed()) {
+				fastest = airField.getJetsList().get(jet).getSpeed();
+				fastestJetIndex = jet;
+			}
+		}
+		System.out.println("\t\t---FASTEST JET---");
+		System.out.println(airField.getJetsList().get(fastestJetIndex));
+		System.out.println();
+	}
+	
+	public void findLongest() {
+		int longest = 0;
+		int longestJetIndex = 0;
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			if (longest < airField.getJetsList().get(jet).getRange()) {
+				longest = airField.getJetsList().get(jet).getRange();
+				longestJetIndex = jet;
+			}
+		}
+		System.out.println("\t\t---LONGEST RANGE---");
+		System.out.println(airField.getJetsList().get(longestJetIndex));
+		System.out.println();
+	}
+	
+	public void loadCargo() {
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			if (airField.getJetsList().get(jet) instanceof CargoPlane) {
+				System.out.print("\t\t" + airField.getJetsList().get(jet).getModel());
+				((CargoPlane) airField.getJetsList().get(jet)).loadCargo();
+			}
+		}
+		System.out.println("\t\tLet's get these to where they need to go!\n");
 	}
 }
