@@ -235,7 +235,7 @@ And finally, selecting option #9 exits the program.
 * A deeper understanding of Abstraction and Inheritance has been gained in this project. Through repetition, trial and error, and sheer will, I can now say that I mostly know what's going on.
 
 
-* A huge personal lesson here has been to take the time I estimate a project to take and double it. There will always be setbacks and roadblocks to overcome, which will extend the amount of time it takes to complete a project significantly.
+* A huge personal lesson here has been to take the time I estimate a project to take and double it. There will always be setbacks and roadblocks to overcome, which will significantly extend the amount of time it takes to complete a project.
 
 
 * If one doesn't intend to fully implement certain classes in their program, it's better to leave them out (oops).
