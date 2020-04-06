@@ -1,7 +1,7 @@
-#Week 3 Skill Distillery - Jets Project
+# Week 3 Skill Distillery - Jets Project
 
 
-###Overview
+### Overview
 This program is a simple emulation of an airfield where users may view current jets in the fleet and their info, as well as add custom jets.
 
 As per usual, the user is greeted with a banner and a menu:
@@ -225,13 +225,13 @@ Selecting option #8 presents the user with the option to delete a jet, and promp
 
 And finally, selecting option #9 exits the program.
 
-###Technologies Used
+### Technologies Used
 - Java SE13
 - Eclipse IDE
 - MacOS Terminal
 - GitHub/Git
 
-###Lessons Learned
+### Lessons Learned
 * A deeper understanding of Abstraction and Inheritance has been gained in this project. Through repetition, trial and error, and sheer will, I can now say that I mostly know what's going on.
 
 
