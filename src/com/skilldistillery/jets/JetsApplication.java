@@ -27,6 +27,12 @@ public class JetsApplication {
 			System.out.println();
 		}
 	}
+	
+	public void flyAllJets() {
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			airField.getJetsList().get(jet).fly();
+		}
+	}
 
 	public void printHeader() {
 		System.out.println(" _______________________________________________ ");
@@ -64,6 +70,7 @@ public class JetsApplication {
 				printJets();
 				break;
 			case 2:
+				flyAllJets();
 				break;
 			case 3:
 				break;

@@ -12,6 +12,12 @@ public class Passenger extends Jet implements TransportReady {
 	public void playMovie() {
 
 	}
+	
+	public void fly() {
+		super.fly();
+		System.out.println("\t\t*** SIR PLEASE COVER YOUR MOUTH WHEN YOU COUGH ***");
+		System.out.println();
+	}
 
 	@Override
 	public String toString() {

@@ -3,11 +3,13 @@ package com.skilldistillery.jets;
 public abstract class Jet {
 
 	private String model;
-	private double speed;  // mach 1 = 767.269 mph
+	private double speed; // mach 1 = 767.269 mph
 	private int range;
 	private long price;
-	
-	public Jet() {}
+	private AirField airField;
+
+	public Jet() {
+	}
 
 	public Jet(String model, double speed, int range, long price) {
 		this.model = model;
@@ -47,12 +49,12 @@ public abstract class Jet {
 	public void setPrice(long price) {
 		this.price = price;
 	}
-	
-	public String fly() {
-		
-		return null;
+
+	public void fly() {
+		System.out.println("\t\t--NOW FLYING--");
+		System.out.println(this.toString());
+		System.out.println("\t\tMax flight time: " + ((double) this.range / this.speed) + " hours");
 	}
-	
 
 	@Override
 	public int hashCode() {
@@ -94,5 +96,5 @@ public abstract class Jet {
 	public String toString() {
 		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
 	}
-	
+
 }

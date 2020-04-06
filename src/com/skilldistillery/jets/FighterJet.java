@@ -12,6 +12,12 @@ public class FighterJet extends Jet implements CombatReady {
 	public void fight() {
 
 	}
+	
+	public void fly() {
+		super.fly();
+		System.out.println("\t\t*** PUTTING WARHEADS ON FOREHEADS ***");
+		System.out.println();
+	}
 
 	@Override
 	public String toString() {

@@ -11,6 +11,12 @@ public class CargoPlane extends Jet implements CargoCarrier {
 	public void loadCargo() {
 		
 	}
+	
+	public void fly() {
+		super.fly();
+		System.out.println("\t\t*** It's not flashy, but it's honest work ***");
+		System.out.println();
+	}
 
 	@Override
 	public String toString() {
