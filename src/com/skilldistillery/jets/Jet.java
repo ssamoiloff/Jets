@@ -2,10 +2,10 @@ package com.skilldistillery.jets;
 
 public abstract class Jet {
 
-	private String model;
-	private double speed; // mach 1 = 767.269 mph
-	private int range;
-	private long price;
+	protected String model;
+	protected double speed; // mach 1 = 767.269 mph
+	protected int range;
+	protected long price;
 	private AirField airField;
 
 	public Jet() {
