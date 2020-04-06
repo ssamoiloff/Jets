@@ -75,6 +75,7 @@ public class JetsApplication {
 				addJet();
 				break;
 			case 8:
+				removeJet();
 				break;
 			case 9:
 				System.exit(0);
@@ -183,7 +184,7 @@ public class JetsApplication {
 			System.out.print("Enter Model: ");
 			kb.nextLine();
 			model = kb.nextLine();
-			System.out.print("Enter Speed: ");
+			System.out.print("Enter Speed (in MPH): ");
 			speed = kb.nextDouble();
 			System.out.print("Enter Range: ");
 			range = kb.nextInt();
@@ -202,5 +203,31 @@ public class JetsApplication {
 			airField.addNewPassenger(model, speed, range, price);
 		}
 		System.out.println();
+	}
+	
+	public void removeJet() {
+		int index = 0;
+		int selection = 0;
+		System.out.println("\tWhich jet would you like to remove?\n");
+		
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			System.out.println((jet+1) + ") " + airField.getJetsList().get(jet));
+			System.out.println();
+		}
+		System.out.print("> ");
+		selection = kb.nextInt();
+		
+		if (!(selection > airField.getJetsList().size()) && selection != 0) {
+			airField.getJetsList().remove(selection-1);
+			System.out.println();
+		} else {
+			while (selection == 0 || selection > airField.getJetsList().size()) {
+				System.out.println("\nPlease select a valid jet #");
+				System.out.print("> ");
+				selection = kb.nextInt();
+			}
+			airField.getJetsList().remove(selection-1);
+			System.out.println();
+		}
 	}
 }
