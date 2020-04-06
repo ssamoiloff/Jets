@@ -1,6 +1,6 @@
-CargoPlane, C-130, 368, 2361, 30000000
-CargoPlane, C-5 Galaxy, 579, 7273, 262750000
-Passenger, 777, 644, 9845, 320200000
-Passenger, 737, 564, 4400, 82000000
-FighterJet, FA-18, 1190, 500, 70500000
-FighterJet, F-22, 1500, 1839, 150000000
+CargoPlane,C-130, 368, 2361, 30000000
+CargoPlane,C-5 Galaxy, 579, 7273, 262750000
+Passenger,Boeing 777, 644, 9845, 320200000
+Passenger,Boeing 737, 564, 4400, 82000000
+FighterJet,FA-18, 1190, 500, 70500000
+FighterJet,F-22, 1500, 1839, 150000000

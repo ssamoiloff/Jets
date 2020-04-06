@@ -17,14 +17,15 @@ public class JetsApplication {
 	public void launch() {
 		airField = new AirField();
 		airField.populateField();
-		printHeader();
-		menuLogic();
-//		printJets();
+//		printHeader();
+//		menuLogic();
+		printJets();
 	}
 	
 	public void printJets() {
 		for (Jet cJet : airField.getJetsList()) {
 			System.out.println(cJet);
+			System.out.println();
 		}
 	}
 
@@ -61,7 +62,7 @@ public class JetsApplication {
 			
 			switch (selection) {
 			case 1:
-				
+				printJets();
 				break;
 			case 2:
 				break;
