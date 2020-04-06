@@ -55,4 +55,17 @@ public class AirField {
 		this.jetsList = jetsList;
 	}
 	
+	public void addNewCargo(String model, double speed, int range, long price) {
+		Jet newJet = new CargoPlane(model, speed, range, price);
+		jetsList.add(newJet);
+	}
+	public void addNewFighter(String model, double speed, int range, long price) {
+		Jet newJet = new FighterJet(model, speed, range, price);
+		jetsList.add(newJet);
+	}
+	public void addNewPassenger(String model, double speed, int range, long price) {
+		Jet newJet = new Passenger(model, speed, range, price);
+		jetsList.add(newJet);
+	}
+	
 }

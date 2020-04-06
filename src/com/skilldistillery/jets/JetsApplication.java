@@ -72,6 +72,7 @@ public class JetsApplication {
 				dogfight();
 				break;
 			case 7:
+				addJet();
 				break;
 			case 8:
 				break;
@@ -140,5 +141,66 @@ public class JetsApplication {
 			}
 		}
 		System.out.println("\t\tGIVE 'EM HELL, BOYS!!!\n");
+	}
+	
+	public void addJet() {
+		int selection = 0;
+		String type = null;
+		do {
+			System.out.println("\t\tChoose a type of jet");
+			System.out.println("1. Cargo");
+			System.out.println("2. Fighter");
+			System.out.println("3. Passenger");
+			System.out.println("4. Actually...nevermind (exit)");
+			System.out.println();
+			System.out.print(">> ");
+			selection = kb.nextInt();
+			
+			switch (selection) {
+			case 1:
+				type = "CargoPlane";
+//				selection = 4;
+				break;
+			case 2:
+				type = "FighterJet";
+//				selection = 4;
+				break;
+			case 3:
+				type = "Passenger";
+//				selection = 4;
+				break;
+			}
+			break;
+		} while (selection != 4);
+		
+		String model = null;
+		double speed = 0.0;
+		int range = 0;
+		long price = 0;
+		
+		if (selection != 4) {
+			System.out.println();
+			System.out.print("Enter Model: ");
+			kb.nextLine();
+			model = kb.nextLine();
+			System.out.print("Enter Speed: ");
+			speed = kb.nextDouble();
+			System.out.print("Enter Range: ");
+			range = kb.nextInt();
+			System.out.print("Enter Price: ");
+			price = kb.nextLong();
+			System.out.println();
+		}
+		
+		if (selection == 1) {
+			airField.addNewCargo(model, speed, range, price);
+		}
+		if (selection == 2) {
+			airField.addNewFighter(model, speed, range, price);
+		}
+		if (selection == 3) {
+			airField.addNewPassenger(model, speed, range, price);
+		}
+		System.out.println();
 	}
 }
