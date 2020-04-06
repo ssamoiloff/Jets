@@ -10,7 +10,7 @@ public class FighterJet extends Jet implements CombatReady {
 	}
 
 	public void fight() {
-
+		System.out.println("....FIRING HEAT SEEKERS PEW PEW PEW\n");
 	}
 	
 	public void fly() {

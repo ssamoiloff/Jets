@@ -69,6 +69,7 @@ public class JetsApplication {
 				loadCargo();
 				break;
 			case 6:
+				dogfight();
 				break;
 			case 7:
 				break;
@@ -123,11 +124,21 @@ public class JetsApplication {
 	
 	public void loadCargo() {
 		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
-			if (airField.getJetsList().get(jet) instanceof CargoPlane) {
+			if (airField.getJetsList().get(jet) instanceof CargoCarrier) {
 				System.out.print("\t\t" + airField.getJetsList().get(jet).getModel());
 				((CargoPlane) airField.getJetsList().get(jet)).loadCargo();
 			}
 		}
 		System.out.println("\t\tLet's get these to where they need to go!\n");
+	}
+	
+	public void dogfight() {
+		for (int jet = 0; jet < airField.getJetsList().size(); jet++) {
+			if (airField.getJetsList().get(jet) instanceof CombatReady) {
+				System.out.print("\t\t" + airField.getJetsList().get(jet).getModel());
+				((FighterJet) airField.getJetsList().get(jet)).fight();
+			}
+		}
+		System.out.println("\t\tGIVE 'EM HELL, BOYS!!!\n");
 	}
 }
