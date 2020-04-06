@@ -17,9 +17,8 @@ public class JetsApplication {
 	public void launch() {
 		airField = new AirField();
 		airField.populateField();
-//		printHeader();
-//		menuLogic();
-		printJets();
+		printHeader();
+		menuLogic();
 	}
 	
 	public void printJets() {

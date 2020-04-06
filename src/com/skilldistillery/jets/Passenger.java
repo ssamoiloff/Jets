@@ -15,8 +15,8 @@ public class Passenger extends Jet implements TransportReady {
 
 	@Override
 	public String toString() {
-		return "Model:\t" + getModel() + "\nSpeed:\t" + getSpeed() + "\nRange:\t" + getRange() + "\nPrice:\t$"
-				+ getPrice();
+		return "\t\tModel:\t" + getModel() + "\n\t\tSpeed:\t" + getSpeed() + "\n\t\tRange:\t" + getRange()
+				+ "\n\t\tPrice:\t$" + getPrice();
 	}
 
 }
